@@ -16,16 +16,21 @@ const Work = () => {
 
     function  getPlan() {
         let year = 12
-        if(planResult.period === 'Annual'){
+        if(planResult.period === 'Annual Plan'){
             setPlanResult({
-                period: 'Monthly',
-                plan: Math.round(59.99/year)
+                period: 'Monthly Plan',
+                plan: Math.round(59.99/year),
+                currency: '$',
+                duration: '/monthly'
+                
              
             })
         }else{
             setPlanResult({
-                period: 'Annual',
-                plan: 59.99
+                period: 'Annual Plan',
+                plan: 59.99,
+                currency: '$',
+                duration: '/year'
             })
         }
               
@@ -40,7 +45,7 @@ const Work = () => {
                 <p>You can now listern to millions of songs, audio books, and podcasts on any device anywhere you like!</p>
                 <div className='music-details' >
                         <img src={iconmusic} alt="" className='music-logo'  />
-                        <h5>{planResult.period} Plan <span>${planResult.plan}/year</span></h5>
+                        <h5>{planResult.period}<span>{planResult.currency}{planResult.plan}{planResult.duration}</span></h5>
                         <button className='btn-change' onClick={getPlan}>Change</button>     
                     </div>
     

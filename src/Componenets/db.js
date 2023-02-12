@@ -12,7 +12,9 @@ export const workImages = [
 ]
 export const plan = [
     {id:1,
-     period: 'Annual',
-     plan: 59.99
+     period: 'Annual Plan',
+     plan: 59.99,
+     currency: '$',
+     durration: '/year'
     
     }]
