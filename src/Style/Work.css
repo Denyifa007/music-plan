@@ -64,7 +64,7 @@
 }
 .music-details h5{
     margin-left: -1rem;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .btn-change{
@@ -185,7 +185,7 @@
     }
     .music-details h5{
         margin-left: -1rem;
-        font-size: 15px;
+        font-size: 13px;
     }
     .btn-change{
         text-decoration: underline;
