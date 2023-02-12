@@ -10,9 +10,9 @@ export const workImages = [
     {img3: iconmusic}
 
 ]
-export const plan = [{id:1,
-
-        period: 'Annual',
-        plan: 59.99
+export const plan = [
+    {id:1,
+     period: 'Annual',
+     plan: 59.99
     
-}]
+    }]

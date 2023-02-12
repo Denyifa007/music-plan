@@ -8,16 +8,18 @@ import iconmusic from '../Assets/icon-music (1).svg';
 
 const Work = () => {
     const [planResult, setPlanResult] = useState(plan)
-    // function handleCancel(id){
-    //     const removeItem = plan.filter((singlePlan)=> singlePlan.id !==id)
-    //     setPlanResult(removeItem)
-    // }
+    function handleCancel(id){
+        const removeItem = plan.filter((singlePlan)=> singlePlan.id !==id)
+        setPlanResult(removeItem)
+    }
+  
 
     function  getPlan() {
+        let year = 12
         if(planResult.period === 'Annual'){
             setPlanResult({
                 period: 'Monthly',
-                plan: Math.round(59.99/12)
+                plan: Math.round(59.99/year)
              
             })
         }else{
@@ -36,19 +38,35 @@ const Work = () => {
                 <div className='text'>
                 <h2>Order Summary</h2>
                 <p>You can now listern to millions of songs, audio books, and podcasts on any device anywhere you like!</p>
-        
-                <div className='music-details'>
-                    <img src={iconmusic} alt="" className='music-logo' />
-                    <h5>{planResult.period} Plan <span>${planResult.plan}/year</span></h5>
-                    <button className='btn-change' onClick={getPlan}>Change</button>
-                </div>
-                <div>
-                <button className='btn'>Proceed to Payment</button>
-                <button className='btn-cancel'>Cancel Order</button> 
-                </div>
+                <div className='music-details' >
+                        <img src={iconmusic} alt="" className='music-logo'  />
+                        <h5>{planResult.period} Plan <span>${planResult.plan}/year</span></h5>
+                        <button className='btn-change' onClick={getPlan}>Change</button>     
+                    </div>
+    
+                {plan.map((datum) =>{
+                    const {id} = datum 
+                    return(
+                        <div key={id}>
+                        <button className='btn'>Proceed to Payment</button> 
+                        <button className='btn-cancel' onClick={()=>handleCancel(id)}>Cancel Order</button>
+                        </div>
+                  
+                    
+                    )
+                })}
+               
+               
+                
+                    
+
+               
+                
+                
                 </div>
 
         </div>
+    
 
 
     </div>
