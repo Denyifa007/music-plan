@@ -62,6 +62,10 @@
     gap: 2rem;
     
 }
+.music-details h5{
+    margin-left: -1rem;
+    font-size: 15px;
+}
 
 .btn-change{
     text-decoration: underline;
@@ -71,6 +75,7 @@
     font-weight: 500;
     text-decoration: underline;
     color: blue;
+    margin-left: 2rem;
 }
 .music-log{
     height: 2.5rem;
@@ -178,6 +183,10 @@
         gap: 2rem;
     
     }
+    .music-details h5{
+        margin-left: -1rem;
+        font-size: 15px;
+    }
     .btn-change{
         text-decoration: underline;
         border: none;
@@ -186,6 +195,7 @@
         font-weight: 500;
         text-decoration: underline;
         color: blue;
+        margin-left: 2rem;
     }
     .music-details span{
         font-weight: 300;
