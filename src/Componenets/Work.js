@@ -3,6 +3,7 @@ import "../Style/Work.css";
 import "./db";
 import illustrationhero from "../Assets/illustration-hero (1).svg";
 import iconmusic from "../Assets/icon-music (1).svg";
+import backgroundimg from '../Assets/pattern-background-desktop (1).svg';
 
 const Work = () => {
   const [planResult, setPlanResult] = useState({
@@ -30,18 +31,17 @@ const Work = () => {
   }
   return (
     <div className="body">
-      <div className="main">
+      <img src={backgroundimg} alt="" className="bg-pattern" />
+      <div className="body-content">
         <img src={illustrationhero} alt="" className="img1" />
-        <div className="text">
-          <h2>Order Summary</h2>
-          <p>
-            You can now listern to millions of songs, audio books, and podcasts
-            on any device anywhere you like!
-          </p>
-          <div className="music-details">
-            <div className="sam">
+        <h2 className="summary">Order Summary</h2>
+        <p className="summary-text">
+          You can now listern to millions of songs, audio books, and podcasts on
+          any device anywhere you like!
+        </p>
+        
             <div className="musicc">
-            <img src={iconmusic} alt="" className="music-logo" />
+              <img src={iconmusic} alt="" className="music-logo" />
               <h5>
                 {planResult.period} <br />
                 <span className="den">
@@ -50,17 +50,12 @@ const Work = () => {
                   {planResult.duration}
                 </span>
               </h5>
-            </div>
               <p id="btn-change" onClick={getPlan}>Change</p>
-            </div>
-          </div>
-          <div>
-            <button className="btn">Proceed to Payment</button>
-            <button className="btn-cancel" onClick={() => setPlanResult([])}>
-              Cancel Order
-            </button>
-          </div>
-        </div>
+              </div>
+              <button className="btn">Proceed to Payment</button>
+              <button className="btn-cancel" onClick={() => setPlanResult([])}>
+                Cancel Order
+              </button>
       </div>
     </div>
   );

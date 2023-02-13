@@ -4,27 +4,30 @@
     box-sizing: border-box;
 }
 .body{
-    background-image: url(../Assets/pattern-background-desktop\ \(1\).svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #e0e8ff;
-    width: 100vw;
-    height: 100vh;
-    
+width: 100%;
+height: 100vh;
+background-color: #e0e8ff;
 }
-.main{
-    margin-left: 25rem;
-    padding: 3rem;
+.body-content{
     width: 20rem;
-    
-    
-    
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.bg-pattern {
+    width: 100%;
+    position: absolute;
 
 }
 .img1{
-    position: absolute;
-    width: 20rem;
-    height: 10rem;
+    width: 100%;
+    height: auto;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     
@@ -32,7 +35,7 @@
     
 }
 .text{
-    position: relative;
+    
     background-color: white;
     width: 20rem;
     height: 20rem;
@@ -43,26 +46,29 @@
     border-bottom-right-radius: 15px;
 
 }
-.text h2{
+.summary{
+    margin: 1rem 0 1rem;
     font-size: 21px;
-    font-weight: 800;
-}
-.text p{
-    font-size: 13px;
-    padding: 1rem;
-    font-weight: 300;
-}
+    font-weight: 700;
 
-.sam{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+.summary-text{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .musicc{
     display: flex;
     align-items: center;
-    /* width: 55%; */
+    width: 90%;
+    margin: 2rem auto 1rem;
+    background-color:  #e0e8ff6b;
+    height: 4rem;
+    padding: 1rem .5rem;
+    
+
 }
 .den{
     font-weight: 300;
@@ -70,18 +76,24 @@
 
 .musicc h5{
     margin-left: 10px;
+    width: 10rem;
+   
 }
 .music-details{
     border-radius: 1rem;
     background-color: #e0e8ff6b;
     padding: 1rem;
 }
+
 #btn-change{
     text-decoration: underline;
     font-size: 15px;
     font-weight: 500;
     color: blue;
     cursor: pointer;
+    width: 90%;
+
+    
 }
 
 .btn{
@@ -92,7 +104,7 @@
     font-size: 12px;
     font-weight: 600;
     width: 17rem;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 7px;
     color: white;
     background-color: blue;
@@ -106,7 +118,7 @@
 .btn-cancel{
     border: none;
     background-color: white;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 1rem;
     font-size: 13px;
     color: grey;
 }
@@ -120,26 +132,36 @@
 
 }
 @media(max-width: 430px){
-    .body{
-        background-image: url(../Assets/pattern-background-mobile.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: #e0e8ff;
-        width: 100vw;
-        height: 100vh;
-        
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    .main{
-        margin: -1.1rem;
-        padding: 2.5rem;
+    .body{
+    width: 100%;
+    height: 100vh;
+    background-color: #e0e8ff;
+    }
+    .body-content{
         width: 20rem;
-
-
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        background-color: white;
+        border-radius: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .bg-pattern {
+        width: 100%;
+        position: absolute;
+    
     }
     .img1{
-
-        width: 20rem;
-        height: 14rem;
+        width: 100%;
+        height: auto;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
         
@@ -147,38 +169,40 @@
         
     }
     .text{
-
+        
         background-color: white;
-        margin-top: 6rem;
         width: 20rem;
-        height: 23rem;
+        height: 20rem;
         padding: 1.5rem;
         text-align: center;
-        top: 8rem;
+        top: 10rem;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
     
     }
-    .text h2{
+    .summary{
+        margin: 1rem 0 1rem;
         font-size: 21px;
-        font-weight: 800;
+        font-weight: 700;
+    
     }
-    .text p{
+    .summary-text{
+        width: 80%;
+        margin: 0 auto;
         font-size: 13px;
-        padding: 1rem;
-        font-weight: 300;
-    }
-  
-    .sam{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        font-weight: 400;
     }
     
     .musicc{
         display: flex;
         align-items: center;
-
+        width: 90%;
+        margin: 2rem auto 1rem;
+        background-color:  #e0e8ff6b;
+        height: 4rem;
+        padding: 1rem .5rem;
+        
+    
     }
     .den{
         font-weight: 300;
@@ -186,28 +210,35 @@
     
     .musicc h5{
         margin-left: 10px;
+        width: 10rem;
+       
     }
     .music-details{
         border-radius: 1rem;
         background-color: #e0e8ff6b;
         padding: 1rem;
     }
+    
     #btn-change{
         text-decoration: underline;
         font-size: 15px;
         font-weight: 500;
         color: blue;
         cursor: pointer;
+        width: 90%;
+    
+        
     }
+    
     .btn{
-        margin-top: 2rem;
+        margin-top: 1rem;
         text-align: center;
     }
-    .btn {
-        font-size: 14px;
+    .btn{
+        font-size: 12px;
         font-weight: 600;
         width: 17rem;
-        height: 3rem;
+        height: 2.5rem;
         border-radius: 7px;
         color: white;
         background-color: blue;
@@ -221,7 +252,7 @@
     .btn-cancel{
         border: none;
         background-color: white;
-        margin-top: 1.5rem;
+        margin: 1.5rem 0 1rem;
         font-size: 13px;
         color: grey;
     }
@@ -234,10 +265,8 @@
     
     
     }
-
-
+   
 }
-
 
 
 
