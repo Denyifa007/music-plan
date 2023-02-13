@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import "../Style/Work.css";
 import "./db";
-import { plan } from "./db";
 import illustrationhero from "../Assets/illustration-hero (1).svg";
 import iconmusic from "../Assets/icon-music (1).svg";
 
 const Work = () => {
-  const [planResult, setPlanResult] = useState(plan);
-  function handleCancel(id) {
-    const removeItem = plan.filter((singlePlan) => singlePlan.id !== id);
-    setPlanResult(removeItem);
-  }
+  const [planResult, setPlanResult] = useState({
+     period: 'Annual Plan',
+     plan: 59.99,
+     currency: '$',
+     durration: '/year'
+    
+    });
+ 
 
   function getPlan() {
     let year = 12;
-    if (planResult.period === "Annual Plan") {
+    if (planResult.period === 'Annual Plan') {
       setPlanResult({
         period: "Monthly Plan",
         plan: Math.round(59.99 / year),
@@ -24,9 +26,8 @@ const Work = () => {
     } else {
       setPlanResult({
         period: "Annual Plan",
-        plan: 59.99,
-        currency: "$",
-        duration: "/year",
+        plan: '$59.99/year',
+      
       });
     }
   }
@@ -47,25 +48,21 @@ const Work = () => {
               <span>
                 {planResult.currency}
                 {planResult.plan}
-                {planResult.duration}
+                {planResult.durration}
               </span>
             </h5>
             <button className="btn-change" onClick={getPlan}>
               Change
             </button>
+        
           </div>
-
-          {plan.map((datum) => {
-            const { id } = datum;
-            return (
-              <div key={id}>
+              <div>
                 <button className="btn">Proceed to Payment</button>
-                <button className="btn-cancel" onClick={() => handleCancel(id)}>
+                <button className="btn-cancel" onClick={()=>setPlanResult ([])}> 
                   Cancel Order
                 </button>
               </div>
-            );
-          })}
+        
         </div>
       </div>
     </div>
