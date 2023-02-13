@@ -6,7 +6,7 @@
 .body{
     background-image: url(../Assets/pattern-background-desktop\ \(1\).svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-color: #e0e8ff;
     width: 100vw;
     height: 100vh;
@@ -52,45 +52,38 @@
     padding: 1rem;
     font-weight: 300;
 }
-.music-details{
-    padding: 1rem;
+
+.sam{
     display: flex;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    width: 17rem;
-    height: 4rem;
-    gap: 2rem;
-    
-}
-.music-details h5{
-    margin-left: -1rem;
-    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.btn-change{
-    text-decoration: underline;
-    border: none;
-    font-size: 12px;
-    background-color: whitesmoke;
-    font-weight: 500;
-    text-decoration: underline;
-    color: blue;
-    margin-left: 2rem;
+.musicc{
+    display: flex;
+    align-items: center;
+    /* width: 55%; */
 }
-.music-log{
-    height: 2.5rem;
-    width: 3rem;
-}
-
-.music-details span{
+.den{
     font-weight: 300;
 }
-.music-details p{
-    font-weight: 500;
-    text-decoration: underline;
-    color: blue;
+
+.musicc h5{
+    margin-left: 10px;
 }
+.music-details{
+    border-radius: 1rem;
+    background-color: #e0e8ff6b;
+    padding: 1rem;
+}
+#btn-change{
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: 500;
+    color: blue;
+    cursor: pointer;
+}
+
 .btn{
     margin-top: 1rem;
     text-align: center;
@@ -175,40 +168,36 @@
         padding: 1rem;
         font-weight: 300;
     }
-    .music-details{
-        padding: 1rem;
+  
+    .sam{
         display: flex;
-        background-color: whitesmoke;
-        border-radius: 5px;
-        height: 4rem;
-        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+    }
     
+    .musicc{
+        display: flex;
+        align-items: center;
+
     }
-    .music-details h5{
-        margin-left: -1rem;
-        font-size: 13px;
-    }
-    .btn-change{
-        text-decoration: underline;
-        border: none;
-        font-size: 12px;
-        background-color: whitesmoke;
-        font-weight: 500;
-        text-decoration: underline;
-        color: blue;
-        margin-left: 2rem;
-    }
-    .music-details span{
+    .den{
         font-weight: 300;
     }
-    .music-details p{
-        font-weight: 500;
-        text-decoration: underline;
-        color: blue;
+    
+    .musicc h5{
+        margin-left: 10px;
     }
-    .music-log{
-        height: 2.5rem;
-        width: 3rem;
+    .music-details{
+        border-radius: 1rem;
+        background-color: #e0e8ff6b;
+        padding: 1rem;
+    }
+    #btn-change{
+        text-decoration: underline;
+        font-size: 15px;
+        font-weight: 500;
+        color: blue;
+        cursor: pointer;
     }
     .btn{
         margin-top: 2rem;
